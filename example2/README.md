@@ -12,10 +12,10 @@ source venv/bin/activate
 
 Step 2 Flask
 ```
-pip install flask==1.1.2 tensorflow
+pip install flask tensorflow gunicorn
 ```
 
-Step 3 Run
+Step 3-1 Run
 ```
 python app.py
 ```
@@ -33,6 +33,11 @@ python app.py
 127.0.0.1 - - [09/Oct/2020 00:33:33] "GET /favicon.ico HTTP/1.1" 404 -
 ```
 
+Step 3-2 另外一种启动方式
+```
+gunicorn -b 127.0.0.1:8000 app:app
+```
+
 Step 4 Call the API
 ```
 curl -X POST \
@@ -43,6 +48,7 @@ curl -X POST \
 	"var1": 10, "var2": 20
 }'
 ```
+
 
 ## 推荐了解
 * Python包管理
