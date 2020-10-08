@@ -12,17 +12,12 @@ source venv/bin/activate
 
 Step 2 Flask
 ```
-pip install flask==1.1.2 tensorflow>=2.0.0
+pip install flask==1.1.2 tensorflow
 ```
 
-Step 3 Install Package
+Step 3 Run
 ```
-python setup.py install
-```
-
-Step 4 Run
-```
-python -m webapp.app
+python app.py
 ```
 应该出现以下信息
 ```
@@ -38,8 +33,15 @@ python -m webapp.app
 127.0.0.1 - - [09/Oct/2020 00:33:33] "GET /favicon.ico HTTP/1.1" 404 -
 ```
 
-Step 5 Call the API
+Step 4 Call the API
 ```
+curl -X POST \
+  http://localhost:8000/model \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -d '{
+	"var1": 10, "var2": 20
+}'
 ```
 
 ## 推荐了解
