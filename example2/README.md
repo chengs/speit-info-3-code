@@ -35,7 +35,7 @@ python app.py
 
 Step 3-2 另外一种启动方式
 ```
-gunicorn -b 127.0.0.1:8000 app:app
+gunicorn -w 4 -b 127.0.0.1:8000 app:app
 ```
 
 Step 4 Call the API
