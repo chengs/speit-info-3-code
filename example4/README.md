@@ -19,3 +19,6 @@ curl -X POST \
   -H 'content-type: application/json' \
   -d '{"instances": [[1,2],[3,4]]}'
 ```
+
+## 建议阅读
+* https://tensorflow.google.cn/tfx/guide/serving?hl=zh-cn
