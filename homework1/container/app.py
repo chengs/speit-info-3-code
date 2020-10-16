@@ -16,7 +16,7 @@ def call():
         model = 'TODO'
 
     # TODO: call your model and receive the resule
-    return jsonify({'predict': 'TODO')})
+    return jsonify({'predict': 'TODO'})
 
 
 if __name__ == "__main__":
